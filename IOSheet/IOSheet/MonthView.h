@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MonthView.h
 //  IOSheet
 //
 //  Created by 季阳 on 15/9/7.
@@ -8,8 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+@interface MonthView : UICollectionViewCell
 @end
-
