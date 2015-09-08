@@ -16,6 +16,7 @@
 		CF4FF49F1B9D3111002C77AC /* IOSheetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4FF49E1B9D3111002C77AC /* IOSheetTests.m */; };
 		CF4FF4AA1B9D6B4F002C77AC /* MonthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4FF4A91B9D6B4F002C77AC /* MonthViewController.m */; };
 		CF4FF4AD1B9D6CE8002C77AC /* MonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4FF4AC1B9D6CE8002C77AC /* MonthView.m */; };
+		CF929F1F1B9E7BCC00456D55 /* DayView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF929F1E1B9E7BCC00456D55 /* DayView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		CF4FF4A91B9D6B4F002C77AC /* MonthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthViewController.m; sourceTree = "<group>"; };
 		CF4FF4AB1B9D6CE8002C77AC /* MonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthView.h; sourceTree = "<group>"; };
 		CF4FF4AC1B9D6CE8002C77AC /* MonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthView.m; sourceTree = "<group>"; };
+		CF929F1D1B9E7BCC00456D55 /* DayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayView.h; sourceTree = "<group>"; };
+		CF929F1E1B9E7BCC00456D55 /* DayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,12 +89,10 @@
 		CF4FF47E1B9D3111002C77AC /* IOSheet */ = {
 			isa = PBXGroup;
 			children = (
+				CF929F1C1B9E7B7900456D55 /* View */,
+				CF929F1B1B9E7B6B00456D55 /* Controller */,
 				CF4FF4831B9D3111002C77AC /* AppDelegate.h */,
 				CF4FF4841B9D3111002C77AC /* AppDelegate.m */,
-				CF4FF4A81B9D6B4F002C77AC /* MonthViewController.h */,
-				CF4FF4A91B9D6B4F002C77AC /* MonthViewController.m */,
-				CF4FF4AB1B9D6CE8002C77AC /* MonthView.h */,
-				CF4FF4AC1B9D6CE8002C77AC /* MonthView.m */,
 				CF4FF48C1B9D3111002C77AC /* Main.storyboard */,
 				CF4FF48F1B9D3111002C77AC /* Images.xcassets */,
 				CF4FF4911B9D3111002C77AC /* LaunchScreen.xib */,
@@ -125,6 +126,26 @@
 				CF4FF49D1B9D3111002C77AC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF929F1B1B9E7B6B00456D55 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF4FF4A81B9D6B4F002C77AC /* MonthViewController.h */,
+				CF4FF4A91B9D6B4F002C77AC /* MonthViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CF929F1C1B9E7B7900456D55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF4FF4AB1B9D6CE8002C77AC /* MonthView.h */,
+				CF4FF4AC1B9D6CE8002C77AC /* MonthView.m */,
+				CF929F1D1B9E7BCC00456D55 /* DayView.h */,
+				CF929F1E1B9E7BCC00456D55 /* DayView.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +253,7 @@
 				CF4FF4AA1B9D6B4F002C77AC /* MonthViewController.m in Sources */,
 				CF4FF4881B9D3111002C77AC /* IOSheet.xcdatamodeld in Sources */,
 				CF4FF4821B9D3111002C77AC /* main.m in Sources */,
+				CF929F1F1B9E7BCC00456D55 /* DayView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +448,7 @@
 				CF4FF4A41B9D3111002C77AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF4FF4A51B9D3111002C77AC /* Build configuration list for PBXNativeTarget "IOSheetTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +457,7 @@
 				CF4FF4A71B9D3111002C77AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

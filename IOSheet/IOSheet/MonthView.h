@@ -9,4 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MonthView : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIView *day_container;
 @end
