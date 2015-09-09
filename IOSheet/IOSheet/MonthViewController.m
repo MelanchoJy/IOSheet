@@ -9,6 +9,8 @@
 #import "MonthViewController.h"
 #import "MonthView.h"
 #import "DayView.h"
+#import "define.h"
+#import "NSDate+DateHelper.h"
 
 @interface MonthViewController ()
 
@@ -29,7 +31,7 @@ static NSString * const reuseIdentifier = @"MONTH_CELL";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 1;
+    return [NSDate monthsBetweenDate:[NSDate getDateTimeFromString:startDate] andDate:[NSDate getDateTimeFromString:endDate]];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

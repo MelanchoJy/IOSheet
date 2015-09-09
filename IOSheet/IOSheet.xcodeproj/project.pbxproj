@@ -17,6 +17,8 @@
 		CF4FF4AA1B9D6B4F002C77AC /* MonthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4FF4A91B9D6B4F002C77AC /* MonthViewController.m */; };
 		CF4FF4AD1B9D6CE8002C77AC /* MonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4FF4AC1B9D6CE8002C77AC /* MonthView.m */; };
 		CF929F1F1B9E7BCC00456D55 /* DayView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF929F1E1B9E7BCC00456D55 /* DayView.m */; };
+		CFA397921BA00FE200A62866 /* NSDate+DateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA397911BA00FE200A62866 /* NSDate+DateHelper.m */; };
+		CFA397971BA0233000A62866 /* CalendarObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA397961BA0233000A62866 /* CalendarObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,11 @@
 		CF4FF4AC1B9D6CE8002C77AC /* MonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthView.m; sourceTree = "<group>"; };
 		CF929F1D1B9E7BCC00456D55 /* DayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayView.h; sourceTree = "<group>"; };
 		CF929F1E1B9E7BCC00456D55 /* DayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayView.m; sourceTree = "<group>"; };
+		CFA397901BA00FE200A62866 /* NSDate+DateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DateHelper.h"; sourceTree = "<group>"; };
+		CFA397911BA00FE200A62866 /* NSDate+DateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DateHelper.m"; sourceTree = "<group>"; };
+		CFA397931BA0120F00A62866 /* define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = define.h; sourceTree = "<group>"; };
+		CFA397951BA0233000A62866 /* CalendarObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarObject.h; sourceTree = "<group>"; };
+		CFA397961BA0233000A62866 /* CalendarObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +96,11 @@
 		CF4FF47E1B9D3111002C77AC /* IOSheet */ = {
 			isa = PBXGroup;
 			children = (
+				CFA397941BA0230A00A62866 /* Instance */,
+				CFA3978F1BA00FA900A62866 /* Helper */,
 				CF929F1C1B9E7B7900456D55 /* View */,
 				CF929F1B1B9E7B6B00456D55 /* Controller */,
+				CFA397931BA0120F00A62866 /* define.h */,
 				CF4FF4831B9D3111002C77AC /* AppDelegate.h */,
 				CF4FF4841B9D3111002C77AC /* AppDelegate.m */,
 				CF4FF48C1B9D3111002C77AC /* Main.storyboard */,
@@ -146,6 +156,24 @@
 				CF929F1E1B9E7BCC00456D55 /* DayView.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		CFA3978F1BA00FA900A62866 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				CFA397901BA00FE200A62866 /* NSDate+DateHelper.h */,
+				CFA397911BA00FE200A62866 /* NSDate+DateHelper.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		CFA397941BA0230A00A62866 /* Instance */ = {
+			isa = PBXGroup;
+			children = (
+				CFA397951BA0233000A62866 /* CalendarObject.h */,
+				CFA397961BA0233000A62866 /* CalendarObject.m */,
+			);
+			name = Instance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +279,8 @@
 				CF4FF4AD1B9D6CE8002C77AC /* MonthView.m in Sources */,
 				CF4FF4851B9D3111002C77AC /* AppDelegate.m in Sources */,
 				CF4FF4AA1B9D6B4F002C77AC /* MonthViewController.m in Sources */,
+				CFA397921BA00FE200A62866 /* NSDate+DateHelper.m in Sources */,
+				CFA397971BA0233000A62866 /* CalendarObject.m in Sources */,
 				CF4FF4881B9D3111002C77AC /* IOSheet.xcdatamodeld in Sources */,
 				CF4FF4821B9D3111002C77AC /* main.m in Sources */,
 				CF929F1F1B9E7BCC00456D55 /* DayView.m in Sources */,
