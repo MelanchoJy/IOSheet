@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class DayObject;
+
 @interface DayView : UIView
 - (instancetype)initDayViewWithFrame:(CGRect)frame;
+- (void)setDayObject:(DayObject *)obj;
 @end

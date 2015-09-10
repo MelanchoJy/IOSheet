@@ -11,6 +11,7 @@
 #import "DayView.h"
 #import "define.h"
 #import "NSDate+DateHelper.h"
+#import "MonthObject.h"
 
 @interface MonthViewController ()
 
@@ -37,11 +38,13 @@ static NSString * const reuseIdentifier = @"MONTH_CELL";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MonthView *cell = (MonthView*)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    for (int i = 0; i < 35; i++) {
-    DayView *day = [[DayView alloc] initDayViewWithFrame:CGRectMake(1 + (95 * (i % 7)), 0 + (61 * (i / 7)), 95, 61)];
-    day.backgroundColor = [UIColor colorWithRed:60/255.0 green:175/255.0 blue:240/255.0 alpha:1.0];
+    MonthObject *cal = [[MonthObject alloc] initCalendarWithRow:[indexPath row]];
+    [cell setCalendarObj:cal];
     
-    [cell.day_container addSubview:day];
+    for (NSUInteger i = 0; i < [cal.days count]; i++) {
+        DayView *day = [[DayView alloc] initDayViewWithFrame:CGRectMake(1 + (95 * (i % 7)), 0 + (61 * (i / 7)), 95, 61)];
+        [day setDayObject:[cal.days objectAtIndex:i]];
+        [cell.day_container addSubview:day];
     }
     
     return cell;

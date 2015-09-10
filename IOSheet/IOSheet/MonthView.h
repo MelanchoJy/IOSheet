@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class MonthObject;
+
 @interface MonthView : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIView *day_container;
+
+- (void)setCalendarObj:(MonthObject *)cal;
 @end

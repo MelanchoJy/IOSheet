@@ -55,4 +55,12 @@
     return days.length;
 }
 
++ (NSInteger)getDayNumOfWeek:(NSDate *)date {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    NSTimeZone *zone = [NSTimeZone timeZoneWithName:@"UTC"];
+    [formatter setTimeZone:zone];
+    formatter.dateFormat=@"e";
+    return [[formatter stringFromDate:date] integerValue];
+}
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "DayView.h"
+#import "DayObject.h"
 
 @interface DayView()
 @property (strong, nonatomic) UILabel *day;
@@ -25,6 +26,15 @@
     }
     
     return self;
+}
+
+- (void)setDayObject:(DayObject *)obj {
+    self.day.text = [obj day];
+    
+    if (obj.this_month)
+        self.backgroundColor = [UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1.0];
+    else
+        self.backgroundColor = [UIColor colorWithRed:173/255.0 green:173/255.0 blue:173/255.0 alpha:1.0];
 }
 
 @end
