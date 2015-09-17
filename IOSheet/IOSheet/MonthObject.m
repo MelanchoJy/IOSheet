@@ -72,8 +72,9 @@
         [self.days addObject:day];
     }
     
-    for (int i = 1; i <= self.days.count % 7; i++) {
-        DayObject *day = [[DayObject alloc] initDayWithDay:[NSString stringWithFormat:@"%i", i] InThisMonth:NO];
+    int i = 1;
+    while ([self.days count] <= 35) {
+        DayObject *day = [[DayObject alloc] initDayWithDay:[NSString stringWithFormat:@"%i", i++] InThisMonth:NO];
         [self.days addObject:day];
     }
 }

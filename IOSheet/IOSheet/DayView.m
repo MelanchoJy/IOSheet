@@ -11,6 +11,7 @@
 
 @interface DayView()
 @property (strong, nonatomic) UILabel *day;
+@property (nonatomic) BOOL this_month;
 @end
 
 @implementation DayView
@@ -20,7 +21,6 @@
     
     if (self) {
         self.day = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 36, 23)];
-        self.day.text = @"1";
         [self.day setFont:[UIFont fontWithName:@"HelveticaNeue" size:13.0f]];
         [self addSubview:self.day];
     }
@@ -30,6 +30,7 @@
 
 - (void)setDayObject:(DayObject *)obj {
     self.day.text = [obj day];
+    self.this_month = [obj this_month];
     
     if (obj.this_month)
         self.backgroundColor = [UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1.0];

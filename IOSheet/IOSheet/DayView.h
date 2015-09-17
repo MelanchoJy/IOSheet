@@ -13,4 +13,6 @@
 @interface DayView : UIView
 - (instancetype)initDayViewWithFrame:(CGRect)frame;
 - (void)setDayObject:(DayObject *)obj;
+
+@property (nonatomic, readonly) BOOL this_month;
 @end
