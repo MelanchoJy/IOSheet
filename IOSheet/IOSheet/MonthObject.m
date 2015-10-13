@@ -68,7 +68,8 @@
     }
     
     for (NSInteger i = 0; i < self.days_in_month; i++) {
-        DayObject *day = [[DayObject alloc] initDayWithDay:[NSString stringWithFormat:@"%li", i + 1] InThisMonth:YES];
+        NSString *dateString = [NSDate getDateStringWithYear:self.year andMonth:self.month andDay:i+1];
+        DayObject *day = [[DayObject alloc] initDayWithDay:[NSString stringWithFormat:@"%li", i + 1] InThisMonth:YES AndQueryDate:dateString];
         [self.days addObject:day];
     }
     

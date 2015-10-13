@@ -16,4 +16,5 @@
 + (NSString *)getCurrentDateTime;
 + (NSInteger)getDaysCountInMonth:(NSDate *)date;
 + (NSInteger)getDayNumOfWeek:(NSDate *)date;
++ (NSString *)getDateStringWithYear:(NSInteger)year andMonth:(NSInteger)month andDay:(NSInteger)day;
 @end

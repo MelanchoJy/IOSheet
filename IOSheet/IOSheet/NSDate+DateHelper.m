@@ -63,4 +63,21 @@
     return [[formatter stringFromDate:date] integerValue];
 }
 
++ (NSString *)getDateStringWithYear:(NSInteger)year andMonth:(NSInteger)month andDay:(NSInteger)day {
+    NSString *dateString = [NSString stringWithFormat:@"%ld", (long)year];
+    if (month<=9) {
+        dateString = [NSString stringWithFormat:@"%@-0%ld", dateString, (long)month];
+    } else {
+        dateString = [NSString stringWithFormat:@"%@-%ld", dateString, (long)month];
+    }
+    
+    if (day<=9) {
+        dateString = [NSString stringWithFormat:@"%@-0%ld", dateString, (long)day];
+    } else {
+        dateString = [NSString stringWithFormat:@"%@-%ld", dateString, (long)day];
+    }
+    
+    return dateString;
+}
+
 @end

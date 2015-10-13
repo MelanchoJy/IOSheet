@@ -13,10 +13,16 @@
 #import "NSDate+DateHelper.h"
 #import "MonthObject.h"
 #import "DayObject.h"
+#import "AddViewController.h"
 
 @interface MonthViewController ()
+- (IBAction)OnClickPiggy:(id)sender;
+
 @property (nonatomic) NSInteger current_row;
-@property (strong, nonatomic) UIView* last_select;
+@property (nonatomic) NSInteger next_row;
+@property (strong, nonatomic) UIView *last_select;
+@property (nonatomic) BOOL didStop;
+@property (nonatomic) BOOL didDisplayCell;
 @end
 
 @implementation MonthViewController
@@ -26,8 +32,11 @@ static NSString * const reuseIdentifier = @"MONTH_CELL";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSInteger month = [NSDate monthsBetweenDate:[NSDate getDateTimeFromString:startDate] andDate:[NSDate getDateTimeFromString:[NSDate getCurrentDateTime]]];
-    NSIndexPath *index = [NSIndexPath indexPathForRow:month inSection:0];
+    self.didStop = YES;
+    self.didDisplayCell = YES;
+    
+    self.current_row = [NSDate monthsBetweenDate:[NSDate getDateTimeFromString:startDate] andDate:[NSDate getDateTimeFromString:[NSDate getCurrentDateTime]]];
+    NSIndexPath *index = [NSIndexPath indexPathForRow:self.current_row inSection:0];
     [self.collectionView scrollToItemAtIndexPath:index
                                 atScrollPosition:UICollectionViewScrollPositionNone
                                         animated:NO];
@@ -41,14 +50,14 @@ static NSString * const reuseIdentifier = @"MONTH_CELL";
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark <UICollectionViewDataSource>
+#pragma mark UICollectionViewDelegate & DataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return [NSDate monthsBetweenDate:[NSDate getDateTimeFromString:startDate] andDate:[NSDate getDateTimeFromString:endDate]];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    self.current_row = [indexPath row];
+    self.next_row = [indexPath row];
     
     MonthView *cell = (MonthView*)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
@@ -61,7 +70,57 @@ static NSString * const reuseIdentifier = @"MONTH_CELL";
         [cell.day_container addSubview:day];
     }
     
+    static BOOL first = YES;
+    if (first) {
+        [cell hideCover];
+        first = NO;
+    }
+    
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    self.didDisplayCell = YES;
+    
+    if (self.next_row != [indexPath row]) {
+        self.current_row = self.next_row;
+    }
+    
+    if (self.didStop) {
+        [self.collectionView.superview setUserInteractionEnabled:YES];
+        MonthView *cell = (MonthView *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:self.current_row inSection:0]];
+        [cell endDragging];
+    }
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView
+                        layout:(UICollectionViewLayout*)collectionViewLayout
+        insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(0, 0, 0, 0);
+}
+
+#pragma mark - UIScrollView Delegate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    self.didStop = NO;
+    self.didDisplayCell = NO;
+    
+    [self.collectionView.superview setUserInteractionEnabled:NO];
+    MonthView *cell = (MonthView *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:self.current_row inSection:0]];
+    [cell beginDragging];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    self.didStop = YES;
+    
+    if (self.didDisplayCell) {
+        [self.collectionView.superview setUserInteractionEnabled:YES];
+        MonthView *cell = (MonthView *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:self.current_row inSection:0]];
+        [cell endDragging];
+    }
 }
 
 #pragma mark - Actions
@@ -76,6 +135,19 @@ static NSString * const reuseIdentifier = @"MONTH_CELL";
             self.last_select = view;
             self.last_select.backgroundColor = [UIColor colorWithRed:235/255.0 green:235/255.0 blue:235/255.0 alpha:1.0];
         }
+    }
+}
+
+- (IBAction)OnClickPiggy:(id)sender {
+    [self performSegueWithIdentifier:@"add_segue" sender:sender];
+}
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"add_segue"]) {
+        AddViewController *add = (AddViewController *)segue.destinationViewController;
+        [add setBarTitle:@"记一笔"];
+        add.collection = self.collectionView;
     }
 }
 

@@ -16,6 +16,13 @@
 		CF4FF49F1B9D3111002C77AC /* IOSheetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4FF49E1B9D3111002C77AC /* IOSheetTests.m */; };
 		CF4FF4AA1B9D6B4F002C77AC /* MonthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4FF4A91B9D6B4F002C77AC /* MonthViewController.m */; };
 		CF4FF4AD1B9D6CE8002C77AC /* MonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4FF4AC1B9D6CE8002C77AC /* MonthView.m */; };
+		CF85CE9C1BB4E18B00C623ED /* AddViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF85CE9B1BB4E18B00C623ED /* AddViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		CF85CEA11BB529F500C623ED /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CF85CEA01BB529F500C623ED /* libsqlite3.tbd */; };
+		CF85CEA41BB52B3800C623ED /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF85CEA31BB52B3800C623ED /* DBManager.m */; settings = {ASSET_TAGS = (); }; };
+		CF85CEA71BB52C7E00C623ED /* SwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CF85CEA61BB52C7E00C623ED /* SwitchButton.m */; settings = {ASSET_TAGS = (); }; };
+		CF85CEAA1BB53C6400C623ED /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = CF85CEA91BB53C6400C623ED /* Event.m */; settings = {ASSET_TAGS = (); }; };
+		CF85CEAD1BB53C8E00C623ED /* ReturnData.m in Sources */ = {isa = PBXBuildFile; fileRef = CF85CEAC1BB53C8E00C623ED /* ReturnData.m */; settings = {ASSET_TAGS = (); }; };
+		CF9260951BB3EA700070118A /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9260941BB3EA700070118A /* AddViewController.m */; settings = {ASSET_TAGS = (); }; };
 		CF929F1F1B9E7BCC00456D55 /* DayView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF929F1E1B9E7BCC00456D55 /* DayView.m */; };
 		CFA397921BA00FE200A62866 /* NSDate+DateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA397911BA00FE200A62866 /* NSDate+DateHelper.m */; };
 		CFA73B581BA1663200ABA1A3 /* MonthObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA73B571BA1663200ABA1A3 /* MonthObject.m */; };
@@ -49,6 +56,19 @@
 		CF4FF4A91B9D6B4F002C77AC /* MonthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthViewController.m; sourceTree = "<group>"; };
 		CF4FF4AB1B9D6CE8002C77AC /* MonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthView.h; sourceTree = "<group>"; };
 		CF4FF4AC1B9D6CE8002C77AC /* MonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthView.m; sourceTree = "<group>"; };
+		CF85CE9A1BB4E18B00C623ED /* AddViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewCell.h; sourceTree = "<group>"; };
+		CF85CE9B1BB4E18B00C623ED /* AddViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewCell.m; sourceTree = "<group>"; };
+		CF85CEA01BB529F500C623ED /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		CF85CEA21BB52B3800C623ED /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		CF85CEA31BB52B3800C623ED /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		CF85CEA51BB52C7E00C623ED /* SwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchButton.h; sourceTree = "<group>"; };
+		CF85CEA61BB52C7E00C623ED /* SwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchButton.m; sourceTree = "<group>"; };
+		CF85CEA81BB53C6400C623ED /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		CF85CEA91BB53C6400C623ED /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		CF85CEAB1BB53C8E00C623ED /* ReturnData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReturnData.h; sourceTree = "<group>"; };
+		CF85CEAC1BB53C8E00C623ED /* ReturnData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReturnData.m; sourceTree = "<group>"; };
+		CF9260931BB3EA700070118A /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		CF9260941BB3EA700070118A /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		CF929F1D1B9E7BCC00456D55 /* DayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayView.h; sourceTree = "<group>"; };
 		CF929F1E1B9E7BCC00456D55 /* DayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayView.m; sourceTree = "<group>"; };
 		CFA397901BA00FE200A62866 /* NSDate+DateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DateHelper.h"; sourceTree = "<group>"; };
@@ -65,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF85CEA11BB529F500C623ED /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +102,7 @@
 		CF4FF4731B9D3111002C77AC = {
 			isa = PBXGroup;
 			children = (
+				CF85CEA01BB529F500C623ED /* libsqlite3.tbd */,
 				CF4FF47E1B9D3111002C77AC /* IOSheet */,
 				CF4FF49B1B9D3111002C77AC /* IOSheetTests */,
 				CF4FF47D1B9D3111002C77AC /* Products */,
@@ -146,6 +168,8 @@
 			children = (
 				CF4FF4A81B9D6B4F002C77AC /* MonthViewController.h */,
 				CF4FF4A91B9D6B4F002C77AC /* MonthViewController.m */,
+				CF9260931BB3EA700070118A /* AddViewController.h */,
+				CF9260941BB3EA700070118A /* AddViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -157,6 +181,10 @@
 				CF4FF4AC1B9D6CE8002C77AC /* MonthView.m */,
 				CF929F1D1B9E7BCC00456D55 /* DayView.h */,
 				CF929F1E1B9E7BCC00456D55 /* DayView.m */,
+				CF85CE9A1BB4E18B00C623ED /* AddViewCell.h */,
+				CF85CE9B1BB4E18B00C623ED /* AddViewCell.m */,
+				CF85CEA51BB52C7E00C623ED /* SwitchButton.h */,
+				CF85CEA61BB52C7E00C623ED /* SwitchButton.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -177,6 +205,12 @@
 				CFA73B571BA1663200ABA1A3 /* MonthObject.m */,
 				CFA73B591BA1666700ABA1A3 /* DayObject.h */,
 				CFA73B5A1BA1666700ABA1A3 /* DayObject.m */,
+				CF85CEA21BB52B3800C623ED /* DBManager.h */,
+				CF85CEA31BB52B3800C623ED /* DBManager.m */,
+				CF85CEA81BB53C6400C623ED /* Event.h */,
+				CF85CEA91BB53C6400C623ED /* Event.m */,
+				CF85CEAB1BB53C8E00C623ED /* ReturnData.h */,
+				CF85CEAC1BB53C8E00C623ED /* ReturnData.m */,
 			);
 			name = Instance;
 			sourceTree = "<group>";
@@ -225,11 +259,12 @@
 		CF4FF4741B9D3111002C77AC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "季阳";
 				TargetAttributes = {
 					CF4FF47B1B9D3111002C77AC = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = F9SA3EB7KW;
 					};
 					CF4FF4971B9D3111002C77AC = {
 						CreatedOnToolsVersion = 6.4;
@@ -281,15 +316,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF9260951BB3EA700070118A /* AddViewController.m in Sources */,
 				CF4FF4AD1B9D6CE8002C77AC /* MonthView.m in Sources */,
 				CF4FF4851B9D3111002C77AC /* AppDelegate.m in Sources */,
 				CF4FF4AA1B9D6B4F002C77AC /* MonthViewController.m in Sources */,
 				CFA73B581BA1663200ABA1A3 /* MonthObject.m in Sources */,
 				CFA397921BA00FE200A62866 /* NSDate+DateHelper.m in Sources */,
+				CF85CEAA1BB53C6400C623ED /* Event.m in Sources */,
 				CF4FF4881B9D3111002C77AC /* IOSheet.xcdatamodeld in Sources */,
 				CF4FF4821B9D3111002C77AC /* main.m in Sources */,
+				CF85CEAD1BB53C8E00C623ED /* ReturnData.m in Sources */,
+				CF85CE9C1BB4E18B00C623ED /* AddViewCell.m in Sources */,
 				CF929F1F1B9E7BCC00456D55 /* DayView.m in Sources */,
 				CFA73B5B1BA1666700ABA1A3 /* DayObject.m in Sources */,
+				CF85CEA71BB52C7E00C623ED /* SwitchButton.m in Sources */,
+				CF85CEA41BB52B3800C623ED /* DBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +393,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -415,9 +457,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = IOSheet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MelanchoJy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -425,9 +471,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = IOSheet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MelanchoJy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -445,6 +495,7 @@
 				);
 				INFOPLIST_FILE = IOSheetTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jiyang.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IOSheet.app/IOSheet";
 			};
@@ -460,6 +511,7 @@
 				);
 				INFOPLIST_FILE = IOSheetTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jiyang.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IOSheet.app/IOSheet";
 			};

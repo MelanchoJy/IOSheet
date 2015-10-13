@@ -16,7 +16,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // Check database Connection
+    self.dbManger = [DBManager getSharedInstance];
+    [self.dbManger createDBwithCompletionHandler:^(BOOL finished, NSError *error) {
+        if (!finished) {
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }];
+    
     return YES;
 }
 
@@ -28,6 +35,8 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    self.dbManger = nil;
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -36,6 +45,9 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    if (self.dbManger == nil) {
+        self.dbManger = [DBManager getSharedInstance];
+    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
